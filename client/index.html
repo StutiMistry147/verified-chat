@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Chat System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login View -->
+    <div id="login-view" class="view active">
+        <div class="login-container">
+            <h1>Distributed Chat</h1>
+            <input type="text" id="username" placeholder="Username" autocomplete="off">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <div class="demo-creds">
+                <p>Demo users: alice / bob / charlie</p>
+                <p>Password: password123</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat View -->
+    <div id="chat-view" class="view">
+        <div class="chat-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Channels</h3>
+                </div>
+                <div id="channels-list" class="channels-list">
+                    <!-- Channels will be populated here -->
+                </div>
+                <div class="user-info">
+                    <span id="current-username"></span>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <!-- Main Chat Area -->
+            <div class="main-chat">
+                <div class="chat-header">
+                    <h2 id="current-channel">general</h2>
+                    <span id="connection-status" class="connection-status connected">Connected</span>
+                </div>
+                <div id="messages-container" class="messages-container">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="message-input-area">
+                    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Only the main app.js as a module -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
